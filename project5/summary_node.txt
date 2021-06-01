@@ -1,0 +1,29 @@
+[2021-05-31 00:58:17,684] 501c879bc257/INFO/locust.main: Run time limit set to 30 seconds
+[2021-05-31 00:58:17,684] 501c879bc257/INFO/locust.main: Starting Locust 1.5.3
+[2021-05-31 00:58:17,686] 501c879bc257/INFO/locust.runners: Spawning 35 users at the rate 35 users/s (0 users already running)...
+[2021-05-31 00:58:18,700] 501c879bc257/INFO/locust.runners: All users spawned: MyUser: 35 (35 total running)
+[2021-05-31 00:58:18,700] 501c879bc257/INFO/locust.runners: Resetting stats
+
+[2021-05-31 00:58:47,438] 501c879bc257/INFO/locust.main: Time limit reached. Stopping Locust.
+[2021-05-31 00:58:47,438] 501c879bc257/INFO/locust.runners: Stopping 35 users
+[2021-05-31 00:58:47,443] 501c879bc257/INFO/locust.runners: 35 Users have been stopped, 0 still running
+[2021-05-31 00:58:47,443] 501c879bc257/INFO/locust.main: Running teardowns...
+[2021-05-31 00:58:47,443] 501c879bc257/INFO/locust.main: Shutting down (exit code 0), bye.
+[2021-05-31 00:58:47,443] 501c879bc257/INFO/locust.main: Cleaning up runner...
+ Name                                                          # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+--------------------------------------------------------------------------------------------------------------------------------------------
+ POST /api/posts                                                  268     0(0.00%)  |      42       6    1918      15  |    9.34    0.00
+ GET /blog/cs144/                                                 920     0(0.00%)  |      54       6    2518      16  |   32.07    0.00
+ POST /login                                                       30     0(0.00%)  |    2603    1820    3387    2700  |    1.05    0.00
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                      1218     0(0.00%)  |     114       6    3387      16  |   42.46    0.00
+
+Response time percentiles (approximated)
+ Type     Name                                                              50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|------------------------------------------------------------|---------|------|------|------|------|------|------|------|------|------|------|------|
+ POST     /api/posts                                                         15     18     20     22     29     36     99   1600   1900   1900   1900    268
+ GET      /blog/cs144/                                                       16     19     21     23     30     39    860   1600   2500   2500   2500    920
+ POST     /login                                                           2700   3200   3200   3200   3300   3400   3400   3400   3400   3400   3400     30
+--------|------------------------------------------------------------|---------|------|------|------|------|------|------|------|------|------|------|------|
+ None     Aggregated                                                         16     19     21     23     33    140   2000   3100   3400   3400   3400   1218
+
