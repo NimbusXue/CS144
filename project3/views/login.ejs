@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<form name="submit" action="/login" method="post">
+	  	<label for="username">Enter username here:</label>
+	  	<input type="text" name="username" id="username" >
+	  	<label for="password">Enter password here:</label>
+	    <input type="text" name="password" id="password" >
+		<button class="button" type="submit" name="action" value="submit">Submit</button>
+		<% if (redirect) { %>
+			<input type="hidden" name="redirect" value=<%= redirect %>>
+		<% } %>
+	</form>
+  </body>
+</html>

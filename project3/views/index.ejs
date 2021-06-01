@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div>
+	    <% for (let post of posts) {
+	    	if (post) {
+	    		var reader = new commonmark.Parser();
+	    		var writer = new commonmark.HtmlRenderer();
+	    		var title = writer.render(reader.parse(post.title)); 
+	    		var body = writer.render(reader.parse(post.body)); %>
+		        <div>
+                <%- title %> 
+		            <%- body %> 
+                <p>username: <%- post.username %></p>
+                <p>post id: <%- post.postid %> </p>
+                <p>created date: <%= new Date(post.created) %> </p>
+                <p>modified date: <%= new Date(post.modified) %></p>
+            </div>
+		    <% } %>
+	    <% } %>
+	</div>
+  <div>
+    <% if (next) { %>
+      <a id="next" href=<%= next %>>Next Page</a>
+    <% } %>
+  </div>
+	
+  </body>
+</html>

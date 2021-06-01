@@ -1,0 +1,9 @@
+
+A simple test input file to check ComputeSHA
+asdf
+adf
+asdf
+fasd
+5
+6
+6534654%6#$%^3456#
